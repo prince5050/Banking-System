@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'header.html'%}
+Welcome,{{request.session.user}}
+<br>
+<img src="{{request.session.image}}" width="100px" height="150px">
+
+<a href="/auth">Back</a>
+<div align="right">
+    <a href="/logout">logout</a>
+</div>
+<div align="center">
+<table cellspacing="20px">
+    <tr>
+        <td><b>Userid:</b></td>
+        <td>{{row.userid}}</td>
+    </tr>
+
+    <tr>
+        <td><b>Account No:</b></td>
+        <td>{{row.acno}}</td>
+    </tr>
+
+    <tr>
+        <td><b>Balance:</b></td>
+        <td>{{row.balance}}</td>
+    </tr>
+
+    <tr>
+        <td><b>Account Type:</b></td>
+        <td>{{row.type}}</td>
+    </tr>
+
+</table>
+</div>
+</body>
+</html>

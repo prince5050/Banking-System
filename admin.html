@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'header.html'%}
+Welcome,{{request.session.user}}
+<br>
+
+<div align="right">
+    <a href="/logout">logout</a>
+</div>
+<div align="center">
+<table cellspacing="20px">
+    <tr>
+        <td> <a href="/viewusers">View All Users</a></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

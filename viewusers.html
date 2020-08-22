@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'header.html'%}
+Welcome,{{request.session.user}}
+<br>
+
+<div align="right">
+    <a href="/logout">logout</a>
+</div>
+<div align="center">
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Account no</th>
+        <th scope="col">User</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Account Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for account in accounts%}
+        <tr>
+
+            <td>{{account.acno}}</td>
+            <td>{{account.userid}}</td>
+            <td>{{account.email}}</td>
+            <td>{{account.mobile}}</td>
+            <td>{{account.type}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
